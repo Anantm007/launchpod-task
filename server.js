@@ -46,6 +46,8 @@ app.use(cors());
 
 // Mounting the routes
 app.use("/api/users", require("./routes/users"));
+app.use("/api/products", require("./routes/products"));
+app.use("/api/customers", require("./routes/customers"));
 
 // Starting the server
 const PORT = process.env.PORT || 5000;

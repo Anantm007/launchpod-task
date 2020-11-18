@@ -32,7 +32,7 @@ const Login = () => {
   };
 
   const loginForm = () => (
-    <div className="container">
+    <div className="container" style={{ margin: "auto", marginTop: "6rem" }}>
       <div className="row">
         <div className="col-md-6">
           <div className="card">

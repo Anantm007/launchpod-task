@@ -5,10 +5,10 @@ const AdminDashboard = () => {
   const [values, setValues] = useState({
     name: "",
     email: "",
-    age: 0,
+    age: "",
     companyName: "",
     location: "",
-    role: 0,
+    role: "",
     loading: false,
   });
 
@@ -34,18 +34,36 @@ const AdminDashboard = () => {
 
   return (
     <Fragment>
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center", marginTop: "10rem" }}>
         <h1>Admin Dashboard</h1>
-        Name: {name} <br />
-        Email: {email}
-        <br />
-        Age: {age}
-        <br />
-        Company: {companyName}
-        <br />
-        Location: {location}
-        <br />
-        Role: {role}
+        <div style={{ margin: "auto" }}>
+          <div
+            class="card"
+            style={{
+              width: "25rem",
+              margin: "auto",
+              marginBottom: "1rem",
+              background: "black",
+              color: "white",
+            }}
+          >
+            <div className="card-body">
+              <h4 class="card-title">Name: {name}</h4> <hr />
+              <h4 class="card-title">Email: {email}</h4> <hr />
+              <h4 class="card-title">Age: {age}</h4> <hr />
+              <h4 class="card-title">Company: {companyName}</h4> <hr />
+              <h4 class="card-title">Location: {location}</h4> <hr />
+              {role === 0 ? (
+                <h4 class="card-title">Role: Employee</h4>
+              ) : (
+                <h4 class="card-title">Role: Admin</h4>
+              )}
+              <a href="#" class="btn btn-primary btn-block">
+                Edit
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </Fragment>
   );

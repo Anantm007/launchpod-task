@@ -11,6 +11,9 @@ import UserDashboard from "./components/user/UserDashboard";
 // Admin
 import AdminDashboard from "./components/user/AdminDashboard";
 
+// Products
+import Products from "./components/products/Products";
+
 // Utilities
 import PrivateRoute from "./components/userAuth/PrivateRoute";
 import AdminRoute from "./components/userAuth/AdminRoute";
@@ -27,6 +30,7 @@ const App = () => {
 
         <Route exact path="/user/login" component={Login} />
         <PrivateRoute exact path="/user/dashboard" component={UserDashboard} />
+        <PrivateRoute exact path="/user/products" component={Products} />
         <AdminRoute exact path="/admin/dashboard" component={AdminDashboard} />
       </Switch>
     </Router>
